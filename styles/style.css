@@ -84,8 +84,9 @@ body {
   color: var(--luxe-muted);
 }
 
-/* Fix visibility of the calendar icon in dark mode */
-input[type="date"]::-webkit-calendar-picker-indicator {
+/* Fix visibility of the calendar and time icons in dark mode */
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
   filter: invert(1);
   cursor: pointer;
 }
