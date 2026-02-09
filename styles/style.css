@@ -1,12 +1,185 @@
-
-/* Style sheet
-   color picker www.w3schools.com/colors/colors_picker.asp
-*/
-
-/* Bootstrap default font-family is Helvetica Neue */
-h1 {
-  font-family: "Times New Roman", Times, serif;
-  text-shadow: 3px 3px 1px black;
-  
+:root {
+  --luxe-gold: #D4AF37;
+  --luxe-black: #1A1A1A;
+  --luxe-gray: #2A2A2A;
+  --luxe-white: #FFFFFF;
+  --luxe-muted: #A0A0A0;
 }
 
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--luxe-black);
+  color: var(--luxe-white);
+}
+
+.section-padding {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.btn-luxe {
+  background-color: var(--luxe-gold);
+  color: var(--luxe-black) !important;
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-luxe:hover {
+  background-color: #bfa030;
+  transform: translateY(-2px);
+}
+
+.card-luxe {
+  background-color: var(--luxe-gray);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  color: var(--luxe-white);
+}
+
+.card-luxe:hover {
+  transform: translateY(-5px);
+}
+
+.text-gold {
+  color: var(--luxe-gold) !important;
+}
+
+.bg-gold {
+  background-color: var(--luxe-gold) !important;
+}
+
+/* Fix visibility for muted text on dark background */
+.text-muted {
+  color: #B0B0B0 !important;
+}
+
+/* Ensure form labels and text are visible */
+.form-label {
+  color: var(--luxe-white);
+  font-weight: 500;
+}
+
+/* Optional: Make inputs slightly darker with white text to match theme better, 
+   but standard BS5 inputs (white bg, dark text) are usually fine unless the page is very dark.
+   Let's make them dark themed inputs for a cohesive look. */
+.form-control,
+.form-select {
+  background-color: var(--luxe-black);
+  border: 1px solid var(--luxe-gray);
+  color: var(--luxe-white);
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: var(--luxe-black);
+  border-color: var(--luxe-gold);
+  color: var(--luxe-white);
+  box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25);
+}
+
+.form-control::placeholder {
+  color: var(--luxe-muted);
+}
+
+/* Vertical layout focus */
+.container {
+  max-width: 600px;
+}
+
+.service-img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.expert-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--luxe-gold);
+}
+
+.booking-summary {
+  background: rgba(212, 175, 55, 0.1);
+  border-left: 4px solid var(--luxe-gold);
+  padding: 1rem;
+  margin-top: 1rem;
+  display: none;
+  color: var(--luxe-white);
+}
+
+/* Logo styling */
+.business-logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
+/* Footer contrast */
+footer.text-muted {
+  color: var(--luxe-muted) !important;
+}
+
+/* Manage slider styling */
+.manage-slider {
+  background: var(--luxe-gray);
+  border: 1px dashed var(--luxe-gold);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.manage-slider .carousel-item {
+  height: 220px;
+  padding: 0 60px;
+}
+
+.manage-slider .carousel-item>div {
+  height: 100%;
+  padding: 30px 0;
+  justify-content: center;
+}
+
+/* Fix carousel control visibility */
+.manage-slider .carousel-control-prev-icon,
+.manage-slider .carousel-control-next-icon {
+  filter: invert(1) brightness(2);
+}
+
+.manage-slider .carousel-control-prev,
+.manage-slider .carousel-control-next {
+  width: 10%;
+  opacity: 0.8;
+}
+
+/* Social Media Button Styling */
+.social-buttons {
+  margin-top: 1.5rem;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: var(--luxe-black);
+  color: var(--luxe-gold) !important;
+  margin: 0 10px;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  text-decoration: none;
+}
+
+.social-btn:hover {
+  background: var(--luxe-gold);
+  color: var(--luxe-black) !important;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}

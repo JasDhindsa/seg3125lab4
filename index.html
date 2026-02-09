@@ -1,250 +1,252 @@
-<!-- This file contains many elements adapted from the online tutoral -->
-<!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
-
-<!-- Images source: -->
-<!-- jule.jpg taken from https://www.freepik.com/premium-vector/cartoon-successful-hairdresser_3951066.htm -->
-<!-- Erwind.jpb https://www.kijiji.ca/v-construction-trades-jobs/winnipeg/bicycle-mechanic/1499188319 -->
-
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- The head should contain an appropriate title for your site -->
 <head>
-    <title>Module 4 - Labo</title>
+    <title>Luxe Cut Barbershop - Premium Grooming</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
-
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Your own additional style sheet -->
     <link href="styles/style.css" rel="stylesheet" type="text/css">
 </head>
 
-
 <body>
 
-    <!-- Medium size container, padding 3, margins 3, background dark, text is white -->
-    <!-- Should show the name of your company with an image or logo -->
-    <!-- Bootstrap has its own font for H1, H2, p, etc.  -->
-    <!-- Look in BS4 Typography https://www.w3schools.com/bootstrap4/bootstrap_typography.asp -->
-    <!-- Use your own CSS file to change those fonts if they do not correspond to your company's look -->
-    <div class="container-md p-3 my-3 border bg-dark text-white">
-        <h1>Welcome to Nice Scissors</h1>
-        <p>We'll take care of your hair!</p>
-    </div>
-
-    <!-- Bootstrap contains a grid system you can explore https://www.w3schools.com/bootstrap4/bootstrap_grid_system.asp -->
-    <!-- It can be useful for placement of information -->
-    <div class="row p-3">
-        <div class="col-sm-3 pl-5">Service</div>
-        <div class="col-sm-3">Calendar</div>
-        <div class="col-sm-3">Payment</div>
-        <div class="col-sm-3">Where to find us</div>
-    </div>
-
-    <!-- When you have messages to tell, remember that center align is not always the best choice -->
-    <div class="container-md p-3 my-3 border bg-light text-success">
-        <h3>Let us tell you about our expertise</h3>
-        <p>We can <mark>cut hair</mark></p>
-        <p class="text-center" >Align wheels</p>
-        <p class="text-uppercase">Write in uppercase</p>
-        <p class="text-center text-uppercase" >centered and uppercase</p>
-    </div>
-
-
-    <!-- Bootstrap has different types of tables https://www.w3schools.com/bootstrap4/bootstrap_tables.asp -->
-    <!-- Might be (or not) useful to show some information to the user -->
-    <div class="container">
-        <h2>Service description</h2>
-        <p>Here is a list of services offered</p>            
-        <table class="table table-primary table-hover">
-            <thead>
-            <tr>
-                <th>Service</th>
-                <th>Description</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>Haircut</td>
-                <td>Bla bla</td>
-            </tr>
-            <tr>
-                <td>Drying</td>
-                <td>Bla bla</td>
-            </tr>
-            <tr>
-                <td>Coloring</td>
-                <td>Bla bla</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-
-
-    <!-- Bootstrap has components for alerts: https://www.w3schools.com/bootstrap4/bootstrap_alerts.asp  -->
-    <!-- These can be useful for making sure someone reads something before continuing -->
-    <div class="container">
-        <h2>Alert</h2>
-        <p>We have something important to say</p>
-        <div class="alert alert-danger alert-dismissible">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
-            <strong>Please read! </strong>You must read.
+    <!-- A. Header / Business Identity -->
+    <header class="container text-center section-padding" id="home">
+        <img src="images/luxe_cut_logo.png" alt="Luxe Cut Logo" class="business-logo">
+        <h1 class="display-3 fw-bold text-gold">LUXE CUT</h1>
+        <p class="lead">Premium Grooming for the Modern Gentleman</p>
+        <div class="mt-4">
+            <p><strong>Address:</strong> 123 Grooming St, Ottawa, ON</p>
+            <p><strong>Hours:</strong> Mon-Sat: 9am - 8pm | Sun: 10am - 4pm</p>
+            <p><strong>Contact:</strong> (613) 555-0123</p>
         </div>
-    </div>
+    </header>
 
-    <!-- You'll certainly need buttons at some point in your site -->
-    <!-- https://www.w3schools.com/bootstrap4/bootstrap_buttons.asp -->
-    <!-- Remember how we talked about choosing a hue and changing the saturation for active/inactive -->
-    <!-- This idea is already part of the components in Bootstrap -->
-    <div class="container">
-        <h2>Button States</h2>
-        <button type="button" class="btn btn-warning">Primary Button</button>
-        <button type="button" class="btn btn-warning active">Active Primary</button>
-        <button type="button" class="btn btn-warning" disabled>Disabled Primary</button>
-    </div>
-
-
-    <!-- Including a modal https://www.w3schools.com/bootstrap4/bootstrap_modal.asp -->
-    <!-- Modals are useful for additional information or questions -->
-    <!-- Here the modal is used for a little survey -->
-    <div class="container">
-        <h2>Modal Example</h2>
-        <!-- Trigger the modal with a button -->
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#mySurvey">Open Survey</button>
-          
-        <!-- Modal -->
-        <div class="modal fade" id="mySurvey" role="dialog">
-            <div class="modal-dialog">  
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <div class="container">
-                        <h2>How did you hear about us?</h2>
-                        <p>Tell us:</p>
-                        <form>
-                          <div class="checkbox">
-                            <label><input type="checkbox" value="">Option 1</label>
-                          </div>
-                          <div class="checkbox">
-                            <label><input type="checkbox" value="">Option 2</label>
-                          </div>
-                        </form>
+    <main>
+        <!-- B. Services & Prices -->
+        <section class="container section-padding" id="services">
+            <h2 class="text-center mb-5 text-gold">Our Services</h2>
+            <div class="row g-4">
+                <div class="col-12">
+                    <div class="card card-luxe h-100">
+                        <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&q=80&w=600"
+                            class="card-img-top service-img" alt="Classic Haircut">
+                        <div class="card-body">
+                            <h5 class="card-title">Classic Haircut</h5>
+                            <p class="card-text">A precision cut tailored to your head shape and hair type.</p>
+                            <span class="badge bg-gold text-dark fw-bold">$35.00</span>
+                        </div>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>     
-        </div>
-        </div>    
-    </div>
-
-    <!-- Presenting the staff with cards: https://www.w3schools.com/bootstrap4/bootstrap_cards.asp -->
-    <!-- Card columns allows multiple cards next to each other -->
-    <!-- The first card's button doesn't go anywhere, it could be a modal --> 
-    <!-- My second card limits the information seen and uses collapsible to show more -->
-    <div class="container p-3">
-        <h2>Meet our hairdressers</h2>
-        <div class="card-columns">
-            <div class="card bg-warning" style="width:200px">
-                <img class="card-img-top" src="images/Jule.jpg" alt="Card image" style="width:100%">
-                <div class="card-body">
-                    <h4 class="card-title">Jules</h4>
-                    <p class="card-text">Jules has been cutting hair for 10 years.</p>
-                    <a href="#" class="btn btn-primary">See Profile</a>
-                </div>
-            </div>
-            <div class="card bg-danger" style="width:200px">
-                <img class="card-img-top" src="images/Jule.jpg" alt="Card image" style="width:100%">
-                <div class="card-body">
-                    <h4 class="card-title">Jules</h4>
-                    <p class="card-text">The curly hair specialist</p>
-                    <!-- collapsible part -->
-                    <a href="#profile" class="btn btn-primary" data-toggle="collapse">See Profile</a>
-                    <div id="profile" class="collapse p-3">
-                        <p>Jules has been cutting hair for 10 years ... </p>
+                <div class="col-12">
+                    <div class="card card-luxe h-100">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSszKXDuCdWbvMmwZR0X6M-N9oxH_eYQyxRSg&s"
+                            class="card-img-top service-img" alt="Hot Towel Shave">
+                        <div class="card-body">
+                            <h5 class="card-title">Hot Towel Shave</h5>
+                            <p class="card-text">Traditional straight razor shave with essential oils and hot towels.
+                            </p>
+                            <span class="badge bg-gold text-dark fw-bold">$45.00</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- A different approach would be to make the whole staff information collapsible -->
-    <!-- Here a block button (taking the full width) opens/closes the collapsible -->
-    <!-- Here a single card is used, but card columns could be used -->
-    <div class="container">
-        <h2>More information</h2>
-        <a href="#mechanics" class="btn btn-primary btn-block" data-toggle="collapse">Meet our mechanics</a>
-        <div id="mechanics" class="collapse">
-            <div class="card bg-warning" style="width:200px">
-                <img class="card-img-top" src="images/Erwind.jpg" alt="Card image" style="width:100%">
-                <div class="card-body">
-                    <h4 class="card-title">Erwind</h4>
-                    <p class="card-text">Erwind knows all about bikes.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Collapsible with multiple items - accordion -->
-    <!-- https://www.w3schools.com/bootstrap4/bootstrap_collapse.asp -->
-    <!-- As we want to do a vertical navigation better suited for mobile design, an accordion pattern -->
-    <!-- could work well.  You can use other patterns too.  This is just an example. -->
-    <div class="container">
-        <div class="container-md p-3 my-3 border bg-warning text-white">
-            <h1>Erwind's and friends bike shop</h1>
-            <p>Bike fixing is our business</p>
-        </div>
-        <div id="accordion">
-            <div class="card">
-                <div class="card-header">
-                    <a class="card-link" data-toggle="collapse" href="#collapseService">Choose a service</a>
-                </div>
-                <div id="collapseService" class="collapse show" data-parent="#accordion">
-                    <div class="card-body">
-                        <p>Here is our list of services</p>
-                    </div>
-                </div>
-            <div class="card">
-                <div class="card-header">
-                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Choose a date</a>
-                </div>
-                <div id="collapseDate" class="collapse" data-parent="#accordion">
-                    <div class="card-body">
-                        <p>What date?</p>
-                        <!-- Bootstrap has various input components. Some examples are given here: -->
-                        <!-- Component shown here: https://v4-alpha.getbootstrap.com/components/forms/#textual-inputs -->
-                        <div class="form-group row">
-                            <label for="dateTimeInput" class="col-2 col-form-label">Date and time</label>
-                            <div class="col-10">
-                                <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="dateTimeInput">
-                            </div>
+                <div class="col-12">
+                    <div class="card card-luxe h-100">
+                        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&q=80&w=600"
+                            class="card-img-top service-img" alt="Beard Trim">
+                        <div class="card-body">
+                            <h5 class="card-title">Beard Trim & Sculpt</h5>
+                            <p class="card-text">Shape and define your beard to perfection.</p>
+                            <span class="badge bg-gold text-dark fw-bold">$25.00</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-header">
-                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Your info</a>
+        </section>
+
+        <!-- C. Experts / Staff -->
+        <section class="container section-padding text-center" id="experts">
+            <h2 class="mb-5 text-gold">Meet Our Master Barbers</h2>
+            <div class="row g-4">
+                <div class="col-12">
+                    <div class="p-3">
+                        <img src="https://i.pravatar.cc/150?u=jules" class="expert-img mb-3" alt="Jules">
+                        <h4>Jules</h4>
+                        <p class="text-muted">Creative Director & Fade Specialist</p>
+                    </div>
                 </div>
-                <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
-                    <div class="card-body">
-                        <p>Your information so we can contact you</p>
-                        <p>Form to enter name, email, phone</p>
+                <div class="col-12">
+                    <div class="p-3">
+                        <img src="https://i.pravatar.cc/150?u=erwind" class="expert-img mb-3" alt="Erwind">
+                        <h4>Erwind</h4>
+                        <p class="text-muted">Master Shaver & Traditionalist</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
 
+        <!-- D. Booking Form -->
+        <section class="container section-padding" id="booking">
+            <h2 class="text-center mb-5 text-gold">Manage Your Visit</h2>
+
+            <!-- Reschedule/Cancel Slider (Carousel) -->
+            <div id="manageCarousel" class="carousel slide manage-slider" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-flex flex-column align-items-center">
+                            <i class="fa-solid fa-calendar-days fa-3x mb-3 text-gold"></i>
+                            <h5 class="text-gold">Need to Reschedule?</h5>
+                            <p>Change your appointment time with ease.</p>
+                            <button class="btn btn-outline-warning btn-sm">Reschedule Now</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex flex-column align-items-center">
+                            <i class="fa-solid fa-calendar-xmark fa-3x mb-3 text-gold"></i>
+                            <h5 class="text-gold">Need to Cancel?</h5>
+                            <p>Can't make it? Let us know here.</p>
+                            <button class="btn btn-outline-danger btn-sm">Cancel Appointment</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#manageCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#manageCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <h2 class="text-center mb-5 text-gold">Book New Appointment</h2>
+            <div class="card card-luxe">
+                <div class="card-body">
+                    <form id="bookingForm">
+                        <div class="mb-3">
+                            <label for="serviceSelect" class="form-label">Select Service</label>
+                            <select class="form-select" id="serviceSelect" required>
+                                <option value="" selected disabled>Choose a service...</option>
+                                <option value="Classic Haircut" data-price="35.00">Classic Haircut - $35.00</option>
+                                <option value="Hot Towel Shave" data-price="45.00">Hot Towel Shave - $45.00</option>
+                                <option value="Beard Trim & Sculpt" data-price="25.00">Beard Trim & Sculpt - $25.00
+                                </option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="dateInput" class="form-label">Date</label>
+                            <input type="date" class="form-control" id="dateInput" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="timeInput" class="form-label">Time</label>
+                            <input type="time" class="form-control" id="timeInput" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="nameInput" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="nameInput" placeholder="John Doe" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="emailInput" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="emailInput" placeholder="name@example.com"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phoneInput" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phoneInput" placeholder="(613) 000-0000"
+                                required>
+                        </div>
+
+                        <div id="bookingSummary" class="booking-summary mb-3">
+                            <h6 class="text-gold fw-bold">Appointment Summary</h6>
+                            <p id="summaryText" class="mb-0"></p>
+                        </div>
+
+                        <button type="submit" id="submitBtn" class="btn btn-luxe w-100 d-none">Book My Spot</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- E. Confirmation Section -->
+        <section class="container section-padding d-none" id="confirmation">
+            <div class="alert alert-success card-luxe text-center" role="alert">
+                <h4 class="alert-heading text-gold">Appointment Confirmed!</h4>
+                <p>Thank you for choosing Luxe Cut. We've sent a confirmation email to <span id="confEmail"
+                        class="fw-bold"></span>.</p>
+                <hr>
+                <p class="mb-0">See you on <span id="confDate" class="fw-bold"></span> at <span id="confTime"
+                        class="fw-bold"></span>.</p>
+                <button class="btn btn-outline-light mt-4" onclick="location.reload()">Book Another</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center p-4 text-muted border-top border-secondary mt-5">
+        <div class="social-buttons mb-3">
+            <a href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-btn"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="social-btn"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+        <p>&copy; 2026 Luxe Cut Barbershop. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const bookingForm = document.getElementById('bookingForm');
+        const serviceSelect = document.getElementById('serviceSelect');
+        const dateInput = document.getElementById('dateInput');
+        const timeInput = document.getElementById('timeInput');
+        const nameInput = document.getElementById('nameInput');
+        const emailInput = document.getElementById('emailInput');
+        const phoneInput = document.getElementById('phoneInput');
+        const summary = document.getElementById('bookingSummary');
+        const summaryText = document.getElementById('summaryText');
+        const submitBtn = document.getElementById('submitBtn');
+        const confirmation = document.getElementById('confirmation');
+        const bookingSection = document.getElementById('booking');
+
+        function updateSummary() {
+            const allFilled = serviceSelect.value && dateInput.value && timeInput.value && nameInput.value && emailInput.value && phoneInput.value;
+
+            if (allFilled) {
+                summary.style.display = 'block';
+                summaryText.innerHTML = `<strong>${serviceSelect.value}</strong> for ${nameInput.value}<br>${dateInput.value} at ${timeInput.value}`;
+                submitBtn.classList.remove('d-none');
+            } else {
+                summary.style.display = 'none';
+                submitBtn.classList.add('d-none');
+            }
+        }
+
+        [serviceSelect, dateInput, timeInput, nameInput, emailInput, phoneInput].forEach(el => {
+            el.addEventListener('change', updateSummary);
+            el.addEventListener('input', updateSummary);
+        });
+
+        bookingForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            document.getElementById('confEmail').textContent = emailInput.value;
+            document.getElementById('confDate').textContent = dateInput.value;
+            document.getElementById('confTime').textContent = timeInput.value;
+
+            bookingSection.classList.add('d-none');
+            confirmation.classList.remove('d-none');
+            confirmation.scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
 </body>
+
 </html>
