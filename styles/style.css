@@ -84,6 +84,12 @@ body {
   color: var(--luxe-muted);
 }
 
+/* Fix visibility of the calendar icon in dark mode */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
 /* Vertical layout focus */
 .container {
   max-width: 600px;
